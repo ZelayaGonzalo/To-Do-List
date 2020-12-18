@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        
+    </head>
+    <body>
+        <header>
+            To do...
+        </header>
+        <nav>
+            <div class="navButton" id="taskList">
+                Tasks List
+            </div>
+            <div class="navButton" id="today">
+                Today
+            </div>
+            <div class="navButton" id="thisWeek">
+                This Week
+            </div> 
+            <div class="navProjects" id="navProjects">
+                <div id="projectTitle">Projects</div>
+
+            </div>
+            <div class="navButton" id="addProject" onclick=showPopUp(event)> Add Project</div>
+            
+
+        </nav>
+        <div class="content" id="tasksContainer">
+            <div class="taskContainerTitle"> All Tasks</div>
+           
+            
+        </div>
+        <input type="button" name="add" id="addTask" onclick=showPopUp(event)>
+
+        <div class="formContainer" id="formContainer">
+            
+            <form class="form">
+                <img src="xButton.png" class="closeWindows" alt="close window" onclick=closePopUp(event)>
+                <label for="title"> Title</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description"> description</label>
+                <textarea name="description" id="description" cols="40" rows="5"></textarea>
+                <label for="date">Due date</label>
+                <input type="date" name="date" id="date" required>
+                <label>Project</label>
+                <select name="project">    
+                    <option value="noProject"> none</option>
+                </select>
+                <input type="submit" id="submit" name="submit" value="Add Task">
+               
+            </form>
+
+        </div>
+
+        <div class="formProjectContainer" id="formProjectContainer">
+            <form class="formProject">
+                <img src="xButton.png" class="closeWindows" alt="close window" onclick=closePopUp(event)>
+                <label for="title"> Title</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description"> Description/Objective</label>
+                <textarea name="description" id="description" cols="40" rows="5"></textarea>
+                <input type="submit" id="submit" name="submit" value="Add Project">
+               
+            </form>
+        </div>
+
+
+
+
+        <script src="main.js"></script>
+    </body>
+</html>
